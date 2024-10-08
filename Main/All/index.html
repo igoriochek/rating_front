@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaMask Integration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="myAppContainer">
+    <div class="container">
+        <div class="sidebar">
+            <button id="loginButton">Login</button>
+            <button id="transactionButton">Review</button>
+            <button id="searchButton">Search</button>
+            <button id="itemInfoButton">Item Info</button>
+            <button id="registerItemButton">Register Item</button>
+        </div>
+        <div class="content">
+            <!-- Login Section -->
+            <div id="loginSection" class="section hidden">
+                <button id="metaMaskLoginButton">Login to MetaMask</button>
+            </div>
+            <!-- Register Item Section -->
+            <div id="registerItemSection" class="section hidden">
+                <label for="itemNameRegister"></label><input type="text" id="itemNameRegister" placeholder="Item name">
+                <button id="registerItem">Register Item</button>
+                <button id="checkItemRegistration">Check Item Registration</button>
+            </div>
+            <!-- Review Section -->
+            <div id="transactionSection" class="section hidden">
+                <div class="star-rating">
+                    <span class="star" data-value="1">&#9734;</span>
+                    <span class="star" data-value="2">&#9734;</span>
+                    <span class="star" data-value="3">&#9734;</span>
+                    <span class="star" data-value="4">&#9734;</span>
+                    <span class="star" data-value="5">&#9734;</span>
+                    <span id="ratingValue">0/5</span>
+                </div>
+                <div>
+                    <label for="itemName"></label><input type="text" id="itemName" placeholder="Item name">
+                </div>
+                <div>
+                    <label for="reviewComment"></label><textarea id="reviewComment" placeholder="Comment"></textarea>
+                </div>
+                <button id="submitTransactionButton">Submit Review</button>
+            </div>
+
+            <!-- Search Section -->
+            <div id="dynamicSection" class="section hidden"></div>
+            <!-- Item Info Section -->
+            <div id="itemInfoSection" class="section hidden">
+                <label for="ItemNameInfoSearch"></label><input type="text" id="ItemNameInfoSearch" placeholder="Enter item name">
+                <button id="performItemInfoSearchButton">Search by registered name</button>
+                <button id="performItemInfoSearchButton2">Search by item name</button>
+                <div id="itemInfoResults"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/ethers@5.6/dist/ethers.umd.min.js"></script>
+<script src="login.js"></script>
+<script src="showSection.js"></script>
+<script src="review.js"></script>
+<script src="search.js"></script>
+<script src="itemInfo.js"></script>
+<script src="registerItem.js"></script>
+</body>
+</html>
