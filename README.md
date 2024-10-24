@@ -46,6 +46,17 @@ This project integrates MetaMask functionalities with a web interface, allowing 
 - `<script src="dynamicProductPage.js" data-itemname="YourProductName"></script>`
 --------------------------------------------
 
+### Registration Directory
+- `registerDomain.js`: Handles the registration of a domain, allowing the user to bind their address to a domain for further interactions.
+- `registerDomain.html`: Simple HTML page that uses `registerDomain.js` to enable easy registration of domains. It requires the domain name to be specified in the `<script>` tag's `data-domainName` attribute.
+- `updateItemDescription.js`: Handles updating the description of an item associated with a registered domain.
+- `updateItemDescription.html`: HTML page to update the item description, where the domain and item names are specified in the `<script>` tag.
+
+### Example Usage:
+- `<script src="registerDomain.js" data-domainName="example.com"></script>` - To register a domain.
+- `<script src="updateItemDescription.js" data-domainName="example.com" data-itemName="Item1"></script>` - To update the item description.
+--------------------------------------------
+
 ## Project Structure(OLD Part)
 
 ### Main Directory
